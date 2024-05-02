@@ -1,0 +1,19 @@
+Nama : null
+Alamat : null
+null			// Null karena belum diinput data
+
+
+
+NIM : A11.2022.14795 	// Mengoutput nim yang telah diinput kedalam mahasiswa
+
+
+
+Nama : null
+Alamat : null
+NIM : A11.2022.14795
+
+
+
+NIM : A11.2022.14795
+Nama : null		//Akan Mengubah urutan sesuai mana yang dipanggil terlebih dahulu
+Alamat : null		
