@@ -10,7 +10,6 @@ public class Student extends Person {
     double spp;
     double sks;
     double modul;
-    double totalP;
 
     public Student(String address, String name, String hobi, String nim){
         super(address, name, hobi);
@@ -21,14 +20,6 @@ public class Student extends Person {
         return nim;
     }
 
-    public double getTotalP(){
-        return totalP;
-    }
-
-    public void bayar(double totalP){
-        this.totalP = totalP;
-    }
-
     @Override
     public void identitas(){
         System.out.println("NIM : " + getNim());
@@ -36,23 +27,21 @@ public class Student extends Person {
     }
 
     public double hitungPembayaran(){
-        return spp + (sks * 250000) + modul;
+        return this.spp + (this.sks * 250000) + this.modul;
     }
 
-    public void inputPembayaran(List<Student> mahasiswa){
-        for (Student student : mahasiswa){
+
+    public void inputPembayaran(){
             Scanner input = new Scanner(System.in);
 
-            System.out.println("Input jumlah SPP : ");
+            System.out.println("\nInput jumlah SPP : ");
             spp = input.nextDouble();
             System.out.println("Input jumlah SKS : ");
             sks = input.nextDouble();
             System.out.println("Input jumlah Modul : ");
             modul = input.nextDouble();
 
-            totalP = hitungPembayaran();
-            student.bayar(totalP);
-        }
+            double totalPembayaran = hitungPembayaran();
     }
 
 
@@ -66,7 +55,7 @@ public class Student extends Person {
         input.nextLine();
 
         for(int i = 0 ; i < n ; i++){
-            System.out.println("Masukkan Data Mahasiswa : " + (i+1));
+            System.out.println("\nMasukkan Data Mahasiswa : " + (i+1));
             System.out.println("Nama : ");
             String name = input.nextLine();
             System.out.println("Nim : ");
@@ -78,21 +67,23 @@ public class Student extends Person {
 
             Student mhs = new Student(addres, name, hobi, nim);
             mahasiswa.add(mhs);
+            mhs.inputPembayaran();
         }
         return mahasiswa;
     }
 
     public void printStudent(List<Student> mahasiswa){
-        System.out.println("\n\nDetail Mahasiswa");
+        System.out.println("\n----------Detail Mahasiswa----------\n");
         double totalBayar = 0;
 
         
         for(int i = 0 ; i < mahasiswa.size() ; i++){
-            System.out.println("Mahasiswa " + (i+1));
+            System.out.println("Mahasiswa " + (i+1) + "\n");
             mahasiswa.get(i).identitas();
-
-            double bayarK = mahasiswa.get(i).getTotalP();
+            double bayarK = mahasiswa.get(i).hitungPembayaran();
             System.out.println("Total Pembayaran : " + bayarK);
+            System.out.println("____________________________________\n");
         }
+        
     }
 }
