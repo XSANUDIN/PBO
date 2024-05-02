@@ -1,7 +1,5 @@
 package PBO.Inheritance;
 
-import PBO.Inheritance.Person;
-
 
 public class Person {
     protected String name;
