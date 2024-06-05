@@ -1,6 +1,7 @@
 package Polymorph;
 
-public class persegiPanjang {
+
+public class persegiPanjang extends bangunAbstract{
     private int panjang;
     private int lebar;
 
