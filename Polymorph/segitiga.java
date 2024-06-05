@@ -1,6 +1,6 @@
 package Polymorph;
 
-public class segitiga {
+public class segitiga extends bangunAbstract{
     private int alas;
     private int tinggi;
     private int sisiA;
