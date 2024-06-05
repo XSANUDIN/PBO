@@ -2,10 +2,6 @@ package Polymorph;
 
 import java.util.*;
 
-import Polymorph.lingkaran;
-import Polymorph.persegi;
-import Polymorph.persegiPanjang;
-
 public class main {
     public static void main(String[] Bangun) {
         Scanner input = new Scanner(System.in);
