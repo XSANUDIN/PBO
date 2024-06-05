@@ -51,12 +51,14 @@ public class main {
     private static void hitungSegitiga(){
         Scanner input = new Scanner(System.in);
 
-        System.out.println("Masukkan Alas");
-        int alas = input.nextInt();
-        System.out.println("Masukkan Tinggi");
-        int tinggi = input.nextInt();
+        System.out.println("Masukkan Sisi A :");
+        int sisiA = input.nextInt();
+        System.out.println("Masukkan Sisi B :");
+        int sisiB = input.nextInt();
+        System.out.println("Masukkan Sisi C :");
+        int sisiC = input.nextInt();
 
-        segitiga s = new segitiga(alas, tinggi);
+        segitiga s = new segitiga(sisiA, sisiB, sisiC);
         s.displayHasil();
     }
 
