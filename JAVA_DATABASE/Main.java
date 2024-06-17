@@ -11,7 +11,7 @@ public class Main {
             System.out.println("------------------------------");
             System.out.println("Pilih Menu Data Perpustakaan :");
             System.out.println("1. Tampilkan Data Buku");
-            System.out.println("2. Masukkan Data Buku");
+            System.out.println("2. Tambah Data Buku");
             System.out.println("3. Edit Data Buku");
             System.out.println("4. Delete Data Buku");
             System.out.println("5. Keluar");
